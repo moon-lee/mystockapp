@@ -7,15 +7,7 @@ const url = 'asx-research/1.0/companies/ax1/header'
 function App() {
   const [companies, setCompanies] = useState([])
 
-  // useEffect(function () {
-  //   fetch(url)
-  //   .then(response => response.json())
-  //   .then(json => console.log(json))
-  // }, [])
-
-  //console.log(companies)
-
-  useEffect(function () {
+   useEffect(function () {
     axios.get(url)
     .then(response => {
       console.log(response.data.data)
