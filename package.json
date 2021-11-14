@@ -2,7 +2,10 @@
   "name": "mystockapp",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://asx.api.markitdigital.com/",
+  "proxy":  {
+      "/asx-research": "https://asx.api.markitdigital.com",
+      "/api": "https://www.marketindex.com.au"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
