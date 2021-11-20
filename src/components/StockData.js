@@ -1,8 +1,25 @@
 import React from "react"
 
-function StockData ({stockdata}) {
+function StockData({ stockdata }) {
+
+    const DisplayData = Object.entries(stockdata).map(([key, value]) => {
+
+        return (
+
+            <tr>
+                <th>{key}</th>
+                <td>{value.toString()}</td>
+            </tr>
+
+
+        )
+
+    })
+ 
     return (
-        <li>{stockdata.id}</li>
+        <table class="table table-striped">
+            {DisplayData}
+        </table>
     )
 }
 
